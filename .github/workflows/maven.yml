@@ -25,7 +25,7 @@ jobs:
     - name: Build with Maven
       run: |               # mvn -B package --file pom.xml or we can use | we can run multiple comands
         mvn clean install
-        ls
-        pwd
-    - name: Deploy into Tomcat
-      run: curl -v -u rakesh:rakesh -T /home/runner/.m2/repository/com/example/maven-project/webapp/1.0-SNAPSHOT/webapp-1.0-SNAPSHOT.war 'ubuntu@52.14.60.144:/opt/tomcat/webapps'
+        cd /home/runner/.m2/repository/com/example/maven-project/webapp/1.0-SNAPSHOT/ && ls
+        
+    #- name: Deploy into Tomcat
+     # run: curl -v -u rakesh:rakesh -T /home/runner/.m2/repository/com/example/maven-project/webapp/1.0-SNAPSHOT/webapp-1.0-SNAPSHOT.war 'ubuntu@52.14.60.144:/opt/tomcat/webapps'
