@@ -27,3 +27,4 @@ jobs:
         mvn clean install
         ls
         pwd
+    - name: curl -v -u rakesh:rakesh -T /home/runner/.m2/repository/com/example/maven-project/webapp/1.0-SNAPSHOT/webapp-1.0-SNAPSHOT.war 'http://52.14.60.144:8080//opt/tomcat/webapps"
