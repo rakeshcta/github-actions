@@ -26,3 +26,4 @@ jobs:
       run: |               # mvn -B package --file pom.xml or we can use | we can run multiple comands
         mvn clean install
         ls
+        pwd
