@@ -27,5 +27,13 @@ jobs:
         mvn clean install
         cd /home/runner/.m2/repository/com/example/maven-project/webapp/1.0-SNAPSHOT/ && ls
         
+    - name: 📂 Sync Files
+      uses: SamKirkland/web-deploy@v1
+      with:
+        target-server: http://52.14.60.144:8080
+        remote-user: rakesh
+        private-ssh-key: rakesh
+        destination-path: /opt/tomcat/webapps
+        
     #- name: Deploy into Tomcat
      # run: curl -v -u rakesh:rakesh -T /home/runner/.m2/repository/com/example/maven-project/webapp/1.0-SNAPSHOT/webapp-1.0-SNAPSHOT.war 'ubuntu@52.14.60.144:/opt/tomcat/webapps'
